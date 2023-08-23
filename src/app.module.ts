@@ -6,6 +6,7 @@ import { dbConfig } from './config/database'
 import { RequestLoggerMiddleware } from './middlewares/request-logger.middleware'
 import { SecurityModule } from './modules/security/security.module'
 import { SeederModule } from './modules/seeder/seeder.module'
+import { TaskModule } from './modules/task/task.module'
 
 
 dotenv.config()
@@ -16,6 +17,7 @@ dotenv.config()
     ScheduleModule.forRoot(),
     SecurityModule,
     SeederModule,
+    TaskModule
   ],
   controllers: [],
   providers: [],

@@ -3,7 +3,6 @@ import { TestingDB } from '../../config/testing-db'
 import { UserUtilsTestImpl } from '../security/user/user-utils/user.utils-test.impl'
 import { UserService } from '../security/user/user.service'
 import { SeederService } from './seeder.service'
-import { CourseCategory } from '../../models/course-category.entity'
 
 describe('SeederService', () => {
   let service: SeederService
@@ -13,14 +12,12 @@ describe('SeederService', () => {
     const conn = await db.initialize()
 
     const userRepo = conn.getRepository(User)
-    const categoryRepo = conn.getRepository(CourseCategory)
 
     const userService = new UserService(userRepo, new UserUtilsTestImpl())
 
     service = new SeederService(
       userService,
       userRepo,
-      categoryRepo
     )
   })
 

@@ -73,4 +73,9 @@ export const errorsCatalogs = {
     code: 'IMAGE_NOT_FOUND',
     httpStatus: NOT_FOUND
   },
+  TASK_NOT_FOUND: {
+    message: 'Task was not found',
+    code: 'TASK_NOT_FOUND',
+    httpStatus: NOT_FOUND
+  },
 }
